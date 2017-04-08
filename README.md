@@ -1,3 +1,4 @@
+
 Achievements.ue4
 ====
 
@@ -18,13 +19,12 @@ UAchievement::AddAchievement(
   cond);
 ```
 
-Set achievement values
-----
-```c++
-void OnDamaged() {
-    _SET_FLAG("death", true);
-    _INCREMENT("revival_count", 1);
 
-    /* ... revive player ... */
-}
-```
+AchivementTypes
+----
+* __Persistent__ : 게임 플레이 전체에 걸쳐서 달성/공유되는 업적
+  * 10번 부활했다.
+  * 보유 골드가 10,000원을 넘었다.
+* __Session__ : 한 게임 세션 안에서 달성해야 하는 업적
+  * 한번도 죽지 않고 클리어했다.
+  * 한 게임에서 스킬을 10번 사용했다.
