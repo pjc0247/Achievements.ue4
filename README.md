@@ -1,4 +1,3 @@
-
 Achievements.ue4
 ====
 
@@ -19,6 +18,16 @@ UAchievement::AddAchievement(
   cond);
 ```
 
+Set achievement values
+----
+```c++
+void OnDamaged() {
+    _SET_FLAG("death", true);
+    _INCREMENT("revival_count", 1);
+
+    /* ... revive player ... */
+}
+```
 
 AchivementTypes
 ----
